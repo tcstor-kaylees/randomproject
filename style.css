@@ -1,8 +1,14 @@
 h1{
-    color:rgb(240, 152, 125);
+    color:#f0987d;
     border: 2px solid;
     border-radius:10px;
     font-size:200px; 
+    animation:color;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-direction:reverse;
+    animation-timing-function:ease;
+
 }
 
 p{
@@ -20,20 +26,50 @@ ol{
     background-color:aquamarine;
 }
 .images{
-    height:150px;
-    width:150px;
+    display:flex;
+    flex-direction:row-reverse;
+    gap:10px;
+    width:60%;
 }
 .button{
     color:rgb(255, 103, 103);
     padding:10px 20px;
     background-color:beige;
     text-decoration:none;
+    transition:background-color 0.3s;
 }
 .button:hover{
     background-color: rgb(136, 218, 243);
 }
-navbar{
+.navbar{
     background-color: aquamarine;
     padding:20px 20px;
     display:flex;
+    width:100%;
+    flex-direction:row;
+}
+nav{
+    background-color:aquamarine;
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0px);
+        }
+}
+.fade-in{
+    animation:fadeIn 1s ease-in 0.5s;
+}
+@keyframes color{
+    from{
+        background-color:#64d166;
+    
+    }
+    to{
+        background-color:rgb(167, 227, 246);
+    }
 }
